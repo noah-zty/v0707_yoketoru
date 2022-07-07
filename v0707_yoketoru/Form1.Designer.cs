@@ -37,11 +37,15 @@ namespace v0707_yoketoru
             this.highlabel = new System.Windows.Forms.Label();
             this.starlabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.GameOverlabel = new System.Windows.Forms.Label();
+            this.CLEARlabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startlabel
             // 
-            this.startlabel.Location = new System.Drawing.Point(281, 240);
+            this.startlabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.startlabel.Location = new System.Drawing.Point(303, 262);
             this.startlabel.Name = "startlabel";
             this.startlabel.Size = new System.Drawing.Size(194, 82);
             this.startlabel.TabIndex = 0;
@@ -51,7 +55,8 @@ namespace v0707_yoketoru
             // titlelabel
             // 
             this.titlelabel.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlelabel.Location = new System.Drawing.Point(238, 76);
+            this.titlelabel.ForeColor = System.Drawing.Color.Blue;
+            this.titlelabel.Location = new System.Drawing.Point(265, 76);
             this.titlelabel.Name = "titlelabel";
             this.titlelabel.Size = new System.Drawing.Size(271, 63);
             this.titlelabel.TabIndex = 1;
@@ -77,9 +82,10 @@ namespace v0707_yoketoru
             // 
             // highlabel
             // 
-            this.highlabel.Location = new System.Drawing.Point(330, 185);
+            this.highlabel.Font = new System.Drawing.Font("Ravie", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highlabel.Location = new System.Drawing.Point(258, 167);
             this.highlabel.Name = "highlabel";
-            this.highlabel.Size = new System.Drawing.Size(100, 23);
+            this.highlabel.Size = new System.Drawing.Size(251, 38);
             this.highlabel.TabIndex = 4;
             this.highlabel.Text = "Highscore 100";
             // 
@@ -92,11 +98,43 @@ namespace v0707_yoketoru
             this.starlabel.TabIndex = 5;
             this.starlabel.Text = "★:10";
             // 
+            // GameOverlabel
+            // 
+            this.GameOverlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.GameOverlabel.Location = new System.Drawing.Point(242, 136);
+            this.GameOverlabel.Name = "GameOverlabel";
+            this.GameOverlabel.Size = new System.Drawing.Size(316, 69);
+            this.GameOverlabel.TabIndex = 6;
+            this.GameOverlabel.Text = "GameOver";
+            // 
+            // CLEARlabel
+            // 
+            this.CLEARlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CLEARlabel.Location = new System.Drawing.Point(270, 139);
+            this.CLEARlabel.Name = "CLEARlabel";
+            this.CLEARlabel.Size = new System.Drawing.Size(261, 68);
+            this.CLEARlabel.TabIndex = 7;
+            this.CLEARlabel.Text = "CLEAR!!";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(276, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(249, 83);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "タイトルへ";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CLEARlabel);
+            this.Controls.Add(this.GameOverlabel);
             this.Controls.Add(this.starlabel);
             this.Controls.Add(this.highlabel);
             this.Controls.Add(this.timelabel);
@@ -118,6 +156,9 @@ namespace v0707_yoketoru
         private System.Windows.Forms.Label highlabel;
         private System.Windows.Forms.Label starlabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label GameOverlabel;
+        private System.Windows.Forms.Label CLEARlabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
