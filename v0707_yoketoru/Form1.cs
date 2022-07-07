@@ -16,5 +16,10 @@ namespace v0707_yoketoru
         {
             InitializeComponent();
         }
+
+        private void titlebotton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace v0707_yoketoru
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.startlabel = new System.Windows.Forms.Button();
+            this.startbutton = new System.Windows.Forms.Button();
             this.titlelabel = new System.Windows.Forms.Label();
             this.Copyrightlabel = new System.Windows.Forms.Label();
             this.timelabel = new System.Windows.Forms.Label();
@@ -39,18 +39,18 @@ namespace v0707_yoketoru
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.GameOverlabel = new System.Windows.Forms.Label();
             this.CLEARlabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.titlebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // startlabel
+            // startbutton
             // 
-            this.startlabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.startlabel.Location = new System.Drawing.Point(303, 262);
-            this.startlabel.Name = "startlabel";
-            this.startlabel.Size = new System.Drawing.Size(194, 82);
-            this.startlabel.TabIndex = 0;
-            this.startlabel.Text = "スタート";
-            this.startlabel.UseVisualStyleBackColor = true;
+            this.startbutton.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.startbutton.Location = new System.Drawing.Point(303, 262);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(194, 82);
+            this.startbutton.TabIndex = 0;
+            this.startbutton.Text = "スタート";
+            this.startbutton.UseVisualStyleBackColor = true;
             // 
             // titlelabel
             // 
@@ -116,15 +116,16 @@ namespace v0707_yoketoru
             this.CLEARlabel.TabIndex = 7;
             this.CLEARlabel.Text = "CLEAR!!";
             // 
-            // button1
+            // titlebutton
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(276, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 83);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "タイトルへ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.titlebutton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titlebutton.Location = new System.Drawing.Point(273, 262);
+            this.titlebutton.Name = "titlebutton";
+            this.titlebutton.Size = new System.Drawing.Size(249, 83);
+            this.titlebutton.TabIndex = 8;
+            this.titlebutton.Text = "タイトルへ";
+            this.titlebutton.UseVisualStyleBackColor = true;
+            this.titlebutton.Click += new System.EventHandler(this.titlebotton_Click);
             // 
             // Form1
             // 
@@ -132,7 +133,7 @@ namespace v0707_yoketoru
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.titlebutton);
             this.Controls.Add(this.CLEARlabel);
             this.Controls.Add(this.GameOverlabel);
             this.Controls.Add(this.starlabel);
@@ -140,7 +141,7 @@ namespace v0707_yoketoru
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.Copyrightlabel);
             this.Controls.Add(this.titlelabel);
-            this.Controls.Add(this.startlabel);
+            this.Controls.Add(this.startbutton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -149,7 +150,7 @@ namespace v0707_yoketoru
 
         #endregion
 
-        private System.Windows.Forms.Button startlabel;
+        private System.Windows.Forms.Button startbutton;
         private System.Windows.Forms.Label titlelabel;
         private System.Windows.Forms.Label Copyrightlabel;
         private System.Windows.Forms.Label timelabel;
@@ -158,7 +159,7 @@ namespace v0707_yoketoru
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label GameOverlabel;
         private System.Windows.Forms.Label CLEARlabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button titlebutton;
     }
 }
 
