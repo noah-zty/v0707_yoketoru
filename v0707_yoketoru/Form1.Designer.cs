@@ -51,6 +51,7 @@ namespace v0707_yoketoru
             this.startbutton.TabIndex = 0;
             this.startbutton.Text = "スタート";
             this.startbutton.UseVisualStyleBackColor = true;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // titlelabel
             // 
@@ -98,9 +99,14 @@ namespace v0707_yoketoru
             this.starlabel.TabIndex = 5;
             this.starlabel.Text = "★:10";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // GameOverlabel
             // 
             this.GameOverlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.GameOverlabel.ForeColor = System.Drawing.Color.Red;
             this.GameOverlabel.Location = new System.Drawing.Point(242, 136);
             this.GameOverlabel.Name = "GameOverlabel";
             this.GameOverlabel.Size = new System.Drawing.Size(316, 69);
@@ -110,6 +116,7 @@ namespace v0707_yoketoru
             // CLEARlabel
             // 
             this.CLEARlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CLEARlabel.ForeColor = System.Drawing.Color.Blue;
             this.CLEARlabel.Location = new System.Drawing.Point(270, 139);
             this.CLEARlabel.Name = "CLEARlabel";
             this.CLEARlabel.Size = new System.Drawing.Size(261, 68);
@@ -119,7 +126,7 @@ namespace v0707_yoketoru
             // titlebutton
             // 
             this.titlebutton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlebutton.Location = new System.Drawing.Point(273, 262);
+            this.titlebutton.Location = new System.Drawing.Point(303, 262);
             this.titlebutton.Name = "titlebutton";
             this.titlebutton.Size = new System.Drawing.Size(249, 83);
             this.titlebutton.TabIndex = 8;
