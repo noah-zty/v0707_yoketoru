@@ -91,6 +91,16 @@ namespace v0707_yoketoru
                     nextState = State.Clear;
                 }
             }
+
+            if(currentState == State.Game)
+            {
+                UpdateGame();
+            }
+        }
+
+        void UpdateGame()
+        {
+            Point mp = PointToClient(MousePosition);
         }
 
         void initProc()

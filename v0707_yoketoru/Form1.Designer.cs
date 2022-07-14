@@ -126,7 +126,7 @@ namespace v0707_yoketoru
             // titlebutton
             // 
             this.titlebutton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlebutton.Location = new System.Drawing.Point(303, 262);
+            this.titlebutton.Location = new System.Drawing.Point(271, 262);
             this.titlebutton.Name = "titlebutton";
             this.titlebutton.Size = new System.Drawing.Size(249, 83);
             this.titlebutton.TabIndex = 8;
