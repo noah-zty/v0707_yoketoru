@@ -64,6 +64,7 @@ namespace v0707_yoketoru
                 {
                     chrs[i].Text = ItemText;
                 }
+                chrs[i].Font = templabel.Font;
                 Controls.Add(chrs[i]);
             }
         }

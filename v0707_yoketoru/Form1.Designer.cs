@@ -40,6 +40,7 @@ namespace v0707_yoketoru
             this.GameOverlabel = new System.Windows.Forms.Label();
             this.CLEARlabel = new System.Windows.Forms.Label();
             this.titlebutton = new System.Windows.Forms.Button();
+            this.templabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startbutton
@@ -134,12 +135,23 @@ namespace v0707_yoketoru
             this.titlebutton.UseVisualStyleBackColor = true;
             this.titlebutton.Click += new System.EventHandler(this.titlebotton_Click);
             // 
+            // templabel
+            // 
+            this.templabel.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.templabel.Location = new System.Drawing.Point(71, 136);
+            this.templabel.Name = "templabel";
+            this.templabel.Size = new System.Drawing.Size(30, 23);
+            this.templabel.TabIndex = 9;
+            this.templabel.Text = "★";
+            this.templabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.templabel);
             this.Controls.Add(this.titlebutton);
             this.Controls.Add(this.CLEARlabel);
             this.Controls.Add(this.GameOverlabel);
@@ -167,6 +179,7 @@ namespace v0707_yoketoru
         private System.Windows.Forms.Label GameOverlabel;
         private System.Windows.Forms.Label CLEARlabel;
         private System.Windows.Forms.Button titlebutton;
+        private System.Windows.Forms.Label templabel;
     }
 }
 
