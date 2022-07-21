@@ -162,6 +162,12 @@ namespace v0707_yoketoru
                     }
                 }
             }
+
+            if(     (time <= 0)
+                &&  (nextState == State.None))
+            {
+                nextState = State.Gameover;
+            }
         }
 
         void initProc()
