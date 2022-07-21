@@ -16,8 +16,11 @@ namespace v0707_yoketoru
         int [] vx = new int [ChrMax];
         int [] vy = new int [ChrMax];
 
+        int itemCount = 0;
+
         const bool isDebug = true;
 
+        const int SpeedMax = 20;
         const int PlayerMax = 1;
         const int EnemyMax = 10;
         const int ItemMax = 10;
@@ -129,6 +132,24 @@ namespace v0707_yoketoru
                 {
                     vy[i] = Math.Abs(vy[i]);
                 }
+
+                if( (mp.X >= chrs[i].Left)
+                  &&(mp.X < chrs[i].Right)
+                  &&(mp.Y >= chrs[i].Top)
+                  &&(mp.Y < chrs[i].Bottom)
+                  )
+                {
+                    if (i < ItemIndex)
+                    {
+                        nextState = State.Gameover;
+                    }
+                    else
+                    {
+                        chrs[i].Visible = false;
+                        itemCount--;
+                        starlabel.Text = "★：" + itemCount;
+                    }
+                }
             }
         }
 
@@ -159,8 +180,8 @@ namespace v0707_yoketoru
                     {
                         chrs[i].Left = rand.Next(ClientSize.Width - chrs[i].Width);
                         chrs[i].Top = rand.Next(ClientSize.Height - chrs[i].Height);
-                        vx[i] = rand.Next(-SpeedMax, Speedmax + 1);
-                        vy[i] = rand.Next(-SpeedMax, Speedmax + 1);
+                        vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
+                        vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
 
                     break;
@@ -182,6 +203,7 @@ namespace v0707_yoketoru
         private void startbutton_Click(object sender, EventArgs e)
         {
             nextState = State.Game;
+            initProc();
         }
     }
 }

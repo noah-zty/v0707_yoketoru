@@ -113,6 +113,7 @@ namespace v0707_yoketoru
             this.GameOverlabel.Size = new System.Drawing.Size(316, 69);
             this.GameOverlabel.TabIndex = 6;
             this.GameOverlabel.Text = "GameOver";
+            this.GameOverlabel.Visible = false;
             // 
             // CLEARlabel
             // 
@@ -123,16 +124,18 @@ namespace v0707_yoketoru
             this.CLEARlabel.Size = new System.Drawing.Size(261, 68);
             this.CLEARlabel.TabIndex = 7;
             this.CLEARlabel.Text = "CLEAR!!";
+            this.CLEARlabel.Visible = false;
             // 
             // titlebutton
             // 
             this.titlebutton.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titlebutton.Location = new System.Drawing.Point(271, 262);
+            this.titlebutton.Location = new System.Drawing.Point(273, 262);
             this.titlebutton.Name = "titlebutton";
             this.titlebutton.Size = new System.Drawing.Size(249, 83);
             this.titlebutton.TabIndex = 8;
             this.titlebutton.Text = "タイトルへ";
             this.titlebutton.UseVisualStyleBackColor = true;
+            this.titlebutton.Visible = false;
             this.titlebutton.Click += new System.EventHandler(this.titlebotton_Click);
             // 
             // templabel
