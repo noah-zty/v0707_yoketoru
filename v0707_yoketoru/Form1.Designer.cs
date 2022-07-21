@@ -85,11 +85,11 @@ namespace v0707_yoketoru
             // highlabel
             // 
             this.highlabel.Font = new System.Drawing.Font("Ravie", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highlabel.Location = new System.Drawing.Point(258, 167);
+            this.highlabel.Location = new System.Drawing.Point(277, 166);
             this.highlabel.Name = "highlabel";
             this.highlabel.Size = new System.Drawing.Size(251, 38);
             this.highlabel.TabIndex = 4;
-            this.highlabel.Text = "Highscore 100";
+            this.highlabel.Text = "HighScore 100";
             // 
             // starlabel
             // 
@@ -108,7 +108,7 @@ namespace v0707_yoketoru
             // 
             this.GameOverlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.GameOverlabel.ForeColor = System.Drawing.Color.Red;
-            this.GameOverlabel.Location = new System.Drawing.Point(242, 136);
+            this.GameOverlabel.Location = new System.Drawing.Point(244, 166);
             this.GameOverlabel.Name = "GameOverlabel";
             this.GameOverlabel.Size = new System.Drawing.Size(316, 69);
             this.GameOverlabel.TabIndex = 6;
@@ -119,7 +119,7 @@ namespace v0707_yoketoru
             // 
             this.CLEARlabel.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.CLEARlabel.ForeColor = System.Drawing.Color.Blue;
-            this.CLEARlabel.Location = new System.Drawing.Point(270, 139);
+            this.CLEARlabel.Location = new System.Drawing.Point(272, 167);
             this.CLEARlabel.Name = "CLEARlabel";
             this.CLEARlabel.Size = new System.Drawing.Size(261, 68);
             this.CLEARlabel.TabIndex = 7;

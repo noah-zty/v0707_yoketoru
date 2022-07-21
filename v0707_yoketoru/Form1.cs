@@ -18,6 +18,7 @@ namespace v0707_yoketoru
 
         int itemCount = 0;
         int time = 0;
+        int hiscore = 0;
 
         const bool isDebug = true;
 
@@ -215,6 +216,11 @@ namespace v0707_yoketoru
                     CLEARlabel.Visible = true;
                     titlebutton.Visible = true;
                     highlabel.Visible = true;
+                    if(time > hiscore)
+                    {
+                        hiscore = time;
+                        highlabel.Text = "HighScore " + hiscore;
+                    }
                     break;
             }
 
