@@ -17,6 +17,7 @@ namespace v0707_yoketoru
         int [] vy = new int [ChrMax];
 
         int itemCount = 0;
+        int time = 0;
 
         const bool isDebug = true;
 
@@ -29,6 +30,7 @@ namespace v0707_yoketoru
         const int PlayerIndex = 0;
         const int EnemyIndex = PlayerIndex + PlayerMax;
         const int ItemIndex = EnemyIndex + EnemyMax;
+        const int StartTime = 100;
 
         const string PlayerText = "(・ω・)";
         const string EnemyText = "◆";
@@ -107,6 +109,9 @@ namespace v0707_yoketoru
 
         void UpdateGame()
         {
+            time--;
+            timelabel.Text = "Time " + time;
+
             Point mp = PointToClient(MousePosition);
 
             chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
@@ -114,6 +119,8 @@ namespace v0707_yoketoru
 
             for(int i = EnemyIndex; i < ChrMax; i++)
             {
+                if (!chrs[i].Visible) continue;
+
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
                 if(chrs[i].Left < 0)
@@ -147,6 +154,10 @@ namespace v0707_yoketoru
                     {
                         chrs[i].Visible = false;
                         itemCount--;
+                        if(itemCount <= 0)
+                        {
+                            nextState = State.Clear;
+                        }
                         starlabel.Text = "★：" + itemCount;
                     }
                 }
@@ -183,6 +194,9 @@ namespace v0707_yoketoru
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
+
+                    itemCount = ItemMax;
+                    time = StartTime + 1;
 
                     break;
 
